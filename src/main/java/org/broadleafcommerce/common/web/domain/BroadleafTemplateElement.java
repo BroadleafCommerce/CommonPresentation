@@ -1,6 +1,6 @@
 /*
  * #%L
- * broadleaf-common-presentation
+ * broadleaf-common-thymeleaf
  * %%
  * Copyright (C) 2009 - 2016 Broadleaf Commerce
  * %%
@@ -15,11 +15,14 @@
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
  */
-package org.broadleafcommerce.common.web.cache;
+package org.broadleafcommerce.common.web.domain;
 
+/**
+ * Marker interface that serves as a common base that can be passed around via processor code not in the module
+ * 
+ * @author Jay Aisenbrey (cja769)
+ *
+ */
+public interface BroadleafTemplateElement {
 
-public interface BroadleafThymeleafCacheInvalidationContext {
-
-    public void clearTemplateCacheFor(String path);
-    
 }

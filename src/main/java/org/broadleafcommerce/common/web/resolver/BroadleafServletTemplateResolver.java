@@ -1,6 +1,6 @@
 /*
  * #%L
- * broadleaf-common-thymeleaf
+ * broadleaf-common-presentation
  * %%
  * Copyright (C) 2009 - 2016 Broadleaf Commerce
  * %%
@@ -15,14 +15,14 @@
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
  */
-package org.broadleafcommerce.common.web.domain;
+package org.broadleafcommerce.common.web.resolver;
 
-/**
- * Marker interface that serves as a common base that can be passed around via processor code not in the module
- * 
- * @author Jay Aisenbrey (cja769)
- *
- */
-public interface BroadleafThymeleafElement {
+
+public class BroadleafServletTemplateResolver extends AbstractBroadleafTemplateResolver {
+
+    @Override
+    public BroadleafTemplateResolverType getResolverType() {
+        return BroadleafTemplateResolverType.SERVLET;
+    }
 
 }

@@ -23,7 +23,7 @@ package org.broadleafcommerce.common.web.resolver;
  * @author Jay Aisenbrey (cja769)
  *
  */
-public interface BroadleafThymeleafTemplateResolver {
+public interface BroadleafTemplateResolver {
     
     /**
      * @return The string that should be automatically added to the beginning of given 
@@ -70,12 +70,12 @@ public interface BroadleafThymeleafTemplateResolver {
     /**
      * @return The type of templates this resolver resolves for
      */
-    public BroadleafThymeleafTemplateMode getTemplateMode();
+    public BroadleafTemplateMode getTemplateMode();
     
     /**
      * @return The type of resolver this resolver is
      */
-    public BroadleafThymeleafTemplateResolverType getResolverType();
+    public BroadleafTemplateResolverType getResolverType();
     
     /**
      * @return Indicates if this resolver should be in set of email resolvers or web resolvers

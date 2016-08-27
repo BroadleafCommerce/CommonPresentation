@@ -1,6 +1,6 @@
 /*
  * #%L
- * broadleaf-common-presentation
+ * broadleaf-common-thymeleaf
  * %%
  * Copyright (C) 2009 - 2016 Broadleaf Commerce
  * %%
@@ -15,14 +15,16 @@
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
  */
-package org.broadleafcommerce.common.web.resolver;
+package org.broadleafcommerce.common.web.domain;
 
+/**
+ * Interface of a basic structure has inside of it other elements. This is effectively set of HTML DOM elements
+ * 
+ * @author Jay Aisenbrey (cja769)
+ *
+ */
+public interface BroadleafTemplateModel {
 
-public class BroadleafThymeleafClasspathTemplateResolver extends AbstractBroadleafThymeleafTemplateResolver {
-
-    @Override
-    public BroadleafThymeleafTemplateResolverType getResolverType() {
-        return BroadleafThymeleafTemplateResolverType.CLASSPATH;
-    }
+    public void addElement(BroadleafTemplateElement elem);
 
 }

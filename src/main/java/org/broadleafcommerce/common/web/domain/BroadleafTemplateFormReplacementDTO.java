@@ -27,34 +27,34 @@ import java.util.Map;
  * @author Jay Aisenbrey (cja769)
  *
  */
-public class BroadleafThymeleafFormReplacementDTO {
+public class BroadleafTemplateFormReplacementDTO {
 
-    protected BroadleafThymeleafModel model;
+    protected BroadleafTemplateModel model;
     protected Map<String, String> formParameters;
     protected Map<String, Object> formLocalVariables;
 
-    public BroadleafThymeleafFormReplacementDTO(BroadleafThymeleafModel model, Map<String, String> formParameters) {
+    public BroadleafTemplateFormReplacementDTO(BroadleafTemplateModel model, Map<String, String> formParameters) {
         this.model = model;
         this.formParameters = formParameters;
     }
     
-    public BroadleafThymeleafFormReplacementDTO(BroadleafThymeleafModel model, Map<String, String> formParameters, Map<String, Object> formLocalVariables) {
+    public BroadleafTemplateFormReplacementDTO(BroadleafTemplateModel model, Map<String, String> formParameters, Map<String, Object> formLocalVariables) {
         this.model = model;
         this.formParameters = formParameters;
         this.formLocalVariables = formLocalVariables;
     }
 
-    public BroadleafThymeleafFormReplacementDTO() {
+    public BroadleafTemplateFormReplacementDTO() {
         model = null;
         formParameters = new HashMap<>();
         formLocalVariables = new HashMap<>();
     }
 
-    public BroadleafThymeleafModel getModel() {
+    public BroadleafTemplateModel getModel() {
         return model;
     }
 
-    public void setModel(BroadleafThymeleafModel model) {
+    public void setModel(BroadleafTemplateModel model) {
         this.model = model;
     }
 

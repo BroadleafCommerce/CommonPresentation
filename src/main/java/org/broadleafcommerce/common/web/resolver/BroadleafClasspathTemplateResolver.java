@@ -15,15 +15,14 @@
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
  */
-package org.broadleafcommerce.common.web.cache;
+package org.broadleafcommerce.common.web.resolver;
 
 
-public interface BroadleafThymeleafCacheContext<K, V>  {
+public class BroadleafClasspathTemplateResolver extends AbstractBroadleafTemplateResolver {
 
-    public V defaultGet(final K key);
-    
-    public void defaultPut(final K key, final V value);
-    
-    public static final String NOT_FOUND = "NOT_FOUND";
+    @Override
+    public BroadleafTemplateResolverType getResolverType() {
+        return BroadleafTemplateResolverType.CLASSPATH;
+    }
+
 }
-

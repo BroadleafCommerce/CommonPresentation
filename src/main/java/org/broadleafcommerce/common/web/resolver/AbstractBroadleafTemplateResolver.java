@@ -17,7 +17,7 @@
  */
 package org.broadleafcommerce.common.web.resolver;
 
-public abstract class AbstractBroadleafThymeleafTemplateResolver implements BroadleafThymeleafTemplateResolver {
+public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemplateResolver {
 
     protected String prefix = "";
     protected String suffix = "";
@@ -26,7 +26,7 @@ public abstract class AbstractBroadleafThymeleafTemplateResolver implements Broa
     protected Long cacheTimeToLive = 0L;
     protected String characterEncoding = "UTF-8";
     protected Integer order = 1000;
-    protected BroadleafThymeleafTemplateMode templateMode = BroadleafThymeleafTemplateMode.HTML5;
+    protected BroadleafTemplateMode templateMode = BroadleafTemplateMode.HTML5;
     protected Boolean emailResolver = false;
     
     @Override
@@ -93,11 +93,11 @@ public abstract class AbstractBroadleafThymeleafTemplateResolver implements Broa
     }
     
     @Override
-    public BroadleafThymeleafTemplateMode getTemplateMode() {
+    public BroadleafTemplateMode getTemplateMode() {
         return templateMode;
     }
     
-    public void setTemplateMode(BroadleafThymeleafTemplateMode templateMode) {
+    public void setTemplateMode(BroadleafTemplateMode templateMode) {
         this.templateMode = templateMode;
     }
 

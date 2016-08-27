@@ -17,14 +17,12 @@
  */
 package org.broadleafcommerce.common.web.resolver;
 
-/**
- * Broadleaf's version of Thymeleaf's enum TemplateMode
- * This enum is used to designate what type of file that a resource resolver should
- * be used for. Normally we'll use {@code HTML} since most templates are HTML
- * 
- * @author Jay Aisenbrey (cja769)
- *
- */
-public enum BroadleafThymeleafTemplateMode {
-    HTML, XML, TEXT, JAVASCRIPT, CSS, RAW, HTML5;
+
+public class BroadleafDatabaseTemplateResolver extends AbstractBroadleafTemplateResolver {
+
+    @Override
+    public BroadleafTemplateResolverType getResolverType() {
+        return BroadleafTemplateResolverType.DATABASE;
+    }
+
 }

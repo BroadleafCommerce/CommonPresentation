@@ -28,27 +28,27 @@ import java.util.Map;
  * @author Jay Aisenbrey (cja769)
  *
  */
-public interface BroadleafThymeleafContext {
+public interface BroadleafTemplateContext {
 
     public Object parseExpression(String value);
 
     public List<BroadleafAssignation> getAssignationSequence(String value, boolean allowParametersWithoutValue);
 
-    public BroadleafThymeleafNonVoidElement createNonVoidElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
+    public BroadleafTemplateNonVoidElement createNonVoidElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
 
-    public BroadleafThymeleafNonVoidElement createNonVoidElement(String tagName);
+    public BroadleafTemplateNonVoidElement createNonVoidElement(String tagName);
 
-    public BroadleafThymeleafElement createStandaloneElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
+    public BroadleafTemplateElement createStandaloneElement(String tagName, Map<String, String> attributes, boolean useDoubleQuotes);
 
-    public BroadleafThymeleafElement createStandaloneElement(String tagName);
+    public BroadleafTemplateElement createStandaloneElement(String tagName);
 
-    public BroadleafThymeleafElement createTextElement(String text);
+    public BroadleafTemplateElement createTextElement(String text);
 
-    public BroadleafThymeleafModel createModel();
+    public BroadleafTemplateModel createModel();
     
-    public void setNodeLocalVariable(BroadleafThymeleafElement element, String key, Object value);
+    public void setNodeLocalVariable(BroadleafTemplateElement element, String key, Object value);
     
-    public void setNodeLocalVariables(BroadleafThymeleafElement element, Map<String, Object> variableMap);
+    public void setNodeLocalVariables(BroadleafTemplateElement element, Map<String, Object> variableMap);
     
     public Object getVariable(String name);
     

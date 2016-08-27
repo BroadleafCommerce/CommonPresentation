@@ -1,6 +1,6 @@
 /*
  * #%L
- * broadleaf-common-thymeleaf
+ * broadleaf-common-presentation
  * %%
  * Copyright (C) 2009 - 2016 Broadleaf Commerce
  * %%
@@ -15,16 +15,11 @@
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
  */
-package org.broadleafcommerce.common.web.domain;
+package org.broadleafcommerce.common.web.cache;
 
-/**
- * Interface of a basic structure has inside of it other elements. This is effectively set of HTML DOM elements
- * 
- * @author Jay Aisenbrey (cja769)
- *
- */
-public interface BroadleafThymeleafModel {
 
-    public void addElement(BroadleafThymeleafElement elem);
+public interface BroadleafTemplateCacheInvalidationContext {
 
+    public void clearTemplateCacheFor(String path);
+    
 }
