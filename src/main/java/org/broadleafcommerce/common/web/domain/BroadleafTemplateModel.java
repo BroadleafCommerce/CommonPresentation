@@ -19,10 +19,10 @@ package org.broadleafcommerce.common.web.domain;
 
 /**
  * The base object for making a new piece of markup using {@link BroadleafTemplateElement}s.
- * see {@link BroadleafTempalateContext} on how to obtain one of these
+ * see {@link BroadleafTemplateContext#createModel()} to create an object that conforms to this interface for you
  * 
  * @author Jay Aisenbrey (cja769)
- *
+ * @see {@link BroadleafTemplateContext#createModel()}
  */
 public interface BroadleafTemplateModel {
 

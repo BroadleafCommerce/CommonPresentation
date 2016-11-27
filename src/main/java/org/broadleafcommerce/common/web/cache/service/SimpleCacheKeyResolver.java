@@ -37,18 +37,23 @@ public class SimpleCacheKeyResolver implements TemplateCacheKeyResolverService {
      * If cacheKey is null, only the templateName is returned.
      * 
      * If cacheKey is "none" then null will be returned causing the template not to be cached.
-     * 
-     * @param templateName - Name of the template that is subject to being cached. 
-     * @param cacheKey - Value of the parameter passed in from the template
-     * @return
+     * @param the tag name that the cache processor is running in
+     * @param tagAttributes the attributes used in the tag or ones added by the cache processor
+     * @param documentName the name of the template
+     * @param lineNumber the line that the cache processor is on
+     * @param context the context that the processor is executing in
      */
     @Override
     public String resolveCacheKey(String tagName, Map<String, String> tagAttributes, String documentName, Integer lineNumber, BroadleafTemplateContext context) {
+        String cacheKey = getStringValue(TemplateCacheKeyResolverService.CACHE_KEY_ATTRIBUTE, tagAttributes, true, context);
+        if (TemplateCacheKeyResolverService.NONE_CACHE_VALUE.equals(cacheKey)) {
+            return null;
+        }
         StringBuilder sb = new StringBuilder();
-        sb.append(getStringValue("cacheKey", tagAttributes, true, context));
+        sb.append(cacheKey);
         String attributeDocName = getStringValue("templateName", tagAttributes, true, context);
-        sb.append(attributeDocName == null ? documentName : attributeDocName);
-        sb.append(lineNumber == null ? 0 : lineNumber);
+        sb.append("_" + attributeDocName == null ? documentName : attributeDocName);
+        sb.append("_" + lineNumber == null ? 0 : lineNumber);
         return sb.toString();
     }
 

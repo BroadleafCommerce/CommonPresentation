@@ -18,11 +18,11 @@
 package org.broadleafcommerce.common.web.domain;
 
 /**
- * Interface for all {@link BroadleafThymeleafElement}s that have the ability to add elements inside of it.
- * Void elements refer to all HTML elements that cannot have a body. Therefore Non void is the inverse
+ * Interface for all {@link BroadleafThymeleafElement}s that have the ability to add elements inside of it. An example is something like a
+ * {@code <p>some text</p>} tag as opposed to a {@code <br />} tag that has no body.
  * 
  * @author Jay Aisenbrey (cja769)
- *
+ * @see {@link BroadleafTemplateContext} for how to create these elements
  */
 public interface BroadleafTemplateNonVoidElement extends BroadleafTemplateElement {
 

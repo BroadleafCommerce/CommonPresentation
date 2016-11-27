@@ -21,7 +21,7 @@ package org.broadleafcommerce.common.web.domain;
  * Marker interface that serves as a common base that can be passed around via processor code
  * 
  * @author Jay Aisenbrey (cja769)
- *
+ * @see {@link BroadleafTemplateContext} for how to create these elements
  */
 public interface BroadleafTemplateElement {
 

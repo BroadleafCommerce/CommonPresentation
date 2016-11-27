@@ -21,10 +21,14 @@ import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
-
+/**
+ * A condition that checks for the existence of a ThymeleafViewRe
+ * 
+ * @author Phillip Verheyden (phillipuniverse)
+ */
 public class TemplatingExistCondition implements Condition {
    
-    public static final String[] CONDITION_CLASSES = new String[] {"org.thymeleaf.spring4.view.ThymeleafViewResolver"};
+    public static final String[] CONDITION_CLASSES = new String[] {"org.thymeleaf.processor.IProcessor"};
     
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {

@@ -26,7 +26,7 @@ package org.broadleafcommerce.common.web.cache;
 public interface BroadleafTemplateCacheInvalidationContext {
 
     /**
-     * Clears the cache entry for the template that is mapped to @param path 
+     * Clears the cache entry for the template for the given <b>path</b>
      */
     public void clearTemplateCacheFor(String path);
     

@@ -42,6 +42,7 @@ public interface BroadleafProcessor {
     /**
      * @return The prefix that should be prepended to the name for the class to be triggered on.
      * The "blc" part of {@code blc:price}
+     * @see {@link BroadleafDialectPrefix}
      */
     public String getPrefix();
     

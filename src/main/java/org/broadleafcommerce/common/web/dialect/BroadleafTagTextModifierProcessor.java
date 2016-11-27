@@ -25,7 +25,6 @@ import java.util.Map;
  * An attribute processor that is used to modify (and replace) the text contents of the tag it's used on
  * 
  * @author Jay Aisenbrey (cja769)
- *
  */
 public interface BroadleafTagTextModifierProcessor extends BroadleafProcessor {
     

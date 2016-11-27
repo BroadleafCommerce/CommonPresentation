@@ -26,7 +26,6 @@ import java.util.Map;
  * An attribute processor that modifies the attributes on the tag that the event was triggered on
  * 
  * @author Jay Aisenbrey (cja769)
- *
  */
 public interface BroadleafAttributeModifierProcessor extends BroadleafProcessor {
 

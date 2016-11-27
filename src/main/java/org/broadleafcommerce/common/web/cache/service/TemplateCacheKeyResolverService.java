@@ -26,6 +26,9 @@ import java.util.Map;
  * @author Brian Polster (bpolster)
  */
 public interface TemplateCacheKeyResolverService {
+    
+    public static final String CACHE_KEY_ATTRIBUTE = "cacheKey";
+    public static final String NONE_CACHE_VALUE = "none";
 
     /**
      * Takes in the Thymeleaf arguments, element, and templateName.    Returns the cacheKey by which

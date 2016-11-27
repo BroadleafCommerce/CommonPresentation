@@ -23,36 +23,33 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Holder object for passing around a {@link BroadleafThymeleafModel} and a Map that represents the parameters
+ * Holder object for passing around a {@link BroadleafTemplateModel} and a Map that represents the parameters
  * that should be used when creating the tag. See {@link AbstractBroadleafModelModifierProcessor}
  * 
  * @author Jay Aisenbrey (cja769)
- *
  */
 public class BroadleafTemplateModelModifierDTO {
 
     protected BroadleafTemplateModel model;
-    protected Map<String, String> formParameters;
-    protected Map<String, Object> formLocalVariables;
-    protected String tagName;
+    protected Map<String, String> formParameters = new HashMap<>();
+    protected Map<String, Object> formLocalVariables = new HashMap<>();
+    protected String replacementTagName;
+    
+    public BroadleafTemplateModelModifierDTO() {
+        // default constructor intentionally left empty
+    }
 
-    public BroadleafTemplateModelModifierDTO(BroadleafTemplateModel model, Map<String, String> formParameters, String tagName) {
+    public BroadleafTemplateModelModifierDTO(BroadleafTemplateModel model, Map<String, String> formParameters, String replacementTagName) {
         this.model = model;
         this.formParameters = formParameters;
-        this.tagName = tagName;
+        this.replacementTagName = replacementTagName;
     }
     
-    public BroadleafTemplateModelModifierDTO(BroadleafTemplateModel model, Map<String, String> formParameters, Map<String, Object> formLocalVariables, String tagName) {
+    public BroadleafTemplateModelModifierDTO(BroadleafTemplateModel model, Map<String, String> formParameters, Map<String, Object> formLocalVariables, String replacementTagName) {
         this.model = model;
         this.formParameters = formParameters;
         this.formLocalVariables = formLocalVariables;
-        this.tagName = tagName;
-    }
-
-    public BroadleafTemplateModelModifierDTO() {
-        model = null;
-        formParameters = new HashMap<>();
-        formLocalVariables = new HashMap<>();
+        this.replacementTagName = replacementTagName;
     }
 
     public BroadleafTemplateModel getModel() {
@@ -79,11 +76,11 @@ public class BroadleafTemplateModelModifierDTO {
         this.formLocalVariables = formLocalVariables;
     }
     
-    public String getTagName() {
-        return tagName;
+    public String getReplacementTagName() {
+        return replacementTagName;
     }
     
-    public void setTagName(String tagName) {
-        this.tagName = tagName;
+    public void setReplacementTagName(String replacementTagName) {
+        this.replacementTagName = replacementTagName;
     }
 }

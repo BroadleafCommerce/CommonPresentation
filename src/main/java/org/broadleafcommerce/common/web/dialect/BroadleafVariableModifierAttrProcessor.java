@@ -22,20 +22,33 @@ import org.broadleafcommerce.common.web.domain.BroadleafTemplateContext;
 import java.util.Map;
 
 /**
- * An attribute processor that adds new variables to the local model
+ * <p>
+ * An attribute processor that adds new variables to the local model. Processors that implement this can be invoked in this way:
+ * 
+ * <pre>
+ * &lt;p blc:add_name_variable&gt;
+ *   &lt;span th:text="${name}"&gt;&lt;/span&gt;
+ * &lt;/p&gt;
+ * </pre>
+ * 
+ * <p>
+ * In this example the processor is {@code add_name_variable} that happens to add a variable for {@code name} to the context to be used only inside
+ * the executing tag.
  * 
  * @author Jay Aisenbrey (cja769)
- *
+ * @deprecated instead of using this interface, you should instead use a {@link org.broadleafcommerce.common.web.expression.BroadleafVariableExpression} in
+ * combination with {@code th:with} to set local variables.
  */
-public interface BroadleafAttributeModelVariableModifierProcessor extends BroadleafProcessor {
+@Deprecated
+public interface BroadleafVariableModifierAttrProcessor extends BroadleafProcessor {
 
     /**
      * @param tagName The name of the tag that the attribute was triggered on
      * @param tagAttributes A map of String to String of all of the attributes on the tag
      * @param attributeName The name of the attribute that triggered the event
      * @param attributeValue The value of the attribute that triggered the event
-     * @param newLocalVariables The map of new variables that should be added to the local model of the tag the event was triggered on
      * @param context The {@link BroadleafTemplateContext} that should be used to perform operations on the tag with
+     * @return new model variables added to the local scope. Returning either an empty map or null adds no new variable definitions
      */
-    public void populateModelVariables(String tagName, Map<String, String> tagAttributes, String attributeName, String attributeValue, Map<String, Object> newLocalVariables, BroadleafTemplateContext context);
+    public Map<String, Object> populateModelVariables(String tagName, Map<String, String> tagAttributes, String attributeName, String attributeValue, BroadleafTemplateContext context);
 }

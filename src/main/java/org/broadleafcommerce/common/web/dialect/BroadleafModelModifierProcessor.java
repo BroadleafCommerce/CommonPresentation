@@ -24,11 +24,16 @@ import org.broadleafcommerce.common.web.domain.BroadleafTemplateModelModifierDTO
 import java.util.Map;
 
 /**
+ * <p>
  * A tag processor that changes the tag to the tagName specified in the {@link BroadleafTemplateModelModifierDTO}, adds attributes to that tag, adds local variables to that tag, and adds a 
- * {@link BroadleafTemplateModel} as the last child of the tag
+ * {@link BroadleafTemplateModel} as the last child of the tag.
+ * 
+ * <p>
+ * This processor is similar to the {@link BroadleafTagReplacementProcessor} in that it modifies the DOM model. This processor is different in that
+ * it is designed to keep the majority of the originally-written model intact and instead augment it with additional elements, tags, etc.
  * 
  * @author Jay Aisenbrey (cja769)
- *
+ * @see AbstractBroadleafModelModifierProcessor
  */
 public interface BroadleafModelModifierProcessor extends BroadleafProcessor {
     

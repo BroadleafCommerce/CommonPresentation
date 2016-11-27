@@ -31,8 +31,7 @@ public class BroadleafDialectPrefix {
     public static final String BLC = "blc";
     
     /**
-     * Specifies the {@link BroadleafProcessor} should use the "blc_admin" prefix.
-     * This means it'll be used in the admin context
+     * Specifies the {@link BroadleafProcessor} should use the "blc_admin" prefix, for use in the Broadleaf admin application
      */
     public static final String BLC_ADMIN = "blc_admin";
     

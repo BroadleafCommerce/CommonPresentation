@@ -17,17 +17,30 @@
  */
 package org.broadleafcommerce.common.web.dialect;
 
+import java.util.List;
+
 /**
- * Default implementation of {@link BroadleafAttributeModelVariableModifierProcessor} that provides some defaults
+ * Default implementation of {@link BroadleafVariableModifierProcessor} that provides some defaults
  * 
  * @author Jay Aisenbrey (cja769)
- *
+ * @deprecated
  */
-public abstract class AbstractBroadleafAttributeModelVariableModifierProcessor implements BroadleafAttributeModelVariableModifierProcessor {
+@Deprecated
+public abstract class AbstractBroadleafVariableModifierProcessor implements BroadleafVariableModifierProcessor {
 
+    @Override
+    public boolean useGlobalScope() {
+        return true;
+    }
+    
     @Override
     public int getPrecedence() {
         return BroadleafProcessor.DEFAULT_PRECEDENCE;
+    }
+    
+    @Override
+    public List<String> getCollectionModelVariableNamesToAddTo() {
+        return null;
     }
     
     @Override

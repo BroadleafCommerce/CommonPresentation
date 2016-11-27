@@ -23,7 +23,33 @@ import org.broadleafcommerce.common.web.domain.BroadleafTemplateModel;
 import java.util.Map;
 
 /**
- * A tag processor that's used to replace the tag that it was triggered on with a {@link BroadleafTemplateModel}
+ * <p>
+ * A tag processor that's used to replace the tag that it was triggered on with a {@link BroadleafTemplateModel}. This allows implementations to
+ * completely replace the element that invokes this with a brand new DOM (usually HTML).
+ * 
+ * <p>
+ * For example, given an implementation of this tag that is invoked like this in the template:
+ * 
+ * <pre>
+ * {@code
+ * <blc:output_javascript message="This is some Javascript"/>
+ * }
+ * </pre>
+ * 
+ * <p>
+ * A processor that implements this interface would replace that with a brand new model like:
+ * 
+ * <pre>
+ * {@code
+ * <script type="text/javascript>
+ *     console.log("This is some Javscript");
+ * </script>
+ * }
+ * </pre>
+ * 
+ * <p>
+ * This differs from the {@link BroadleafModelModifierProcessor} in that this {@link BroadleafTagReplacementProcessor} completely replaces the tag with a new model
+ * while the {@link BroadleafModelModifierProcessor} is designed to augment the originally-written dom.
  * 
  * @author Jay Aisenbrey (cja769)
  *
@@ -31,7 +57,9 @@ import java.util.Map;
 public interface BroadleafTagReplacementProcessor extends BroadleafProcessor {
 
     /**
-     * @return true if the model returned has template logic that needs to reprocessed; else false
+     * @return true if the model returned has template logic that needs to reprocessed. This should return true if any of the elements added to
+     * the resulting {@link BroadleafTemplateModel} from the given {@link BroadleafTemplateContext} have additional expressions or includes that
+     * are template-processing specific (e.g. extra includes, addition of new variables in the tags, etc).
      */
     public boolean replacementNeedsProcessing();
 
