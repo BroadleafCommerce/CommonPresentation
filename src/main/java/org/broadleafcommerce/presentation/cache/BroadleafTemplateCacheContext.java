@@ -23,7 +23,6 @@ package org.broadleafcommerce.presentation.cache;
  * The cache that is being interacted with is usually has entries where the key is the path and the value is the fully evaluated template
  * 
  * @author Jay Aisenbrey (cja769)
- *
  */
 public interface BroadleafTemplateCacheContext<K, V>  {
 

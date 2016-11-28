@@ -21,7 +21,6 @@ package org.broadleafcommerce.presentation.cache;
  * Utility class to modify the current template cache of template path name to fully evaluated templates
  * 
  * @author Jay Aisenbrey (cja769)
- *
  */
 public interface BroadleafTemplateCacheInvalidationContext {
 
