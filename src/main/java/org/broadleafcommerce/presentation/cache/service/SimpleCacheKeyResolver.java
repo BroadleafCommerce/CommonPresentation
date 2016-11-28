@@ -19,7 +19,6 @@
 package org.broadleafcommerce.presentation.cache.service;
 
 import org.broadleafcommerce.presentation.model.BroadleafTemplateContext;
-import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
@@ -29,7 +28,6 @@ import java.util.Map;
  * 
  * @author Brian Polster (bpolster)
  */
-@Service("blTemplateCacheKeyResolver")
 public class SimpleCacheKeyResolver implements TemplateCacheKeyResolverService {
     
     /**
