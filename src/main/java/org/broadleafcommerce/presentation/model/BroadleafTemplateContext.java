@@ -22,6 +22,8 @@ import org.springframework.web.servlet.support.BindStatus;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Utility class to be used to do various functions on and around the template
  * 
@@ -94,4 +96,9 @@ public interface BroadleafTemplateContext {
      * @return Gets the current Spring {@link BindStatus} for {@code attributeValue}
      */
     public BindStatus getBindStatus(String attributeValue);
+    
+    /**
+     * @return The current HttpServletRequest if it exists or null otherwise
+     */
+    public HttpServletRequest getRequest();
 }
