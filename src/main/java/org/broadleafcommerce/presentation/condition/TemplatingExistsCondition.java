@@ -22,11 +22,11 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * A condition that checks for the existence of a ThymeleafViewRe
+ * A condition that checks for the existence of a Thymeleaf class to indicate whether or not templating is active.
  * 
  * @author Phillip Verheyden (phillipuniverse)
  */
-public class TemplatingExistCondition implements Condition {
+public class TemplatingExistsCondition implements Condition {
    
     public static final String[] CONDITION_CLASSES = new String[] {"org.thymeleaf.processor.IProcessor"};
     
