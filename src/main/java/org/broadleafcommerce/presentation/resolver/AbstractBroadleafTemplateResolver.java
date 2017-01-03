@@ -17,6 +17,8 @@
  */
 package org.broadleafcommerce.presentation.resolver;
 
+import java.io.InputStream;
+
 /**
  * Abstract implementation of {@link BroadleafTemplateResolver} that has some defaults.
  * Most of the time you'll want to create a bean of an existing implementation of this class.
@@ -117,4 +119,8 @@ public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemp
         this.emailResolver = emailResolver;
     }
 
+    @Override
+    public InputStream resolveResource(String template, String resourceName) {
+        return null;
+    }
 }

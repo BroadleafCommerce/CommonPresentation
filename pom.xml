@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>broadleaf-common-presentation</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <name>BroadleafCommerce Common Presentation</name>
     <description>BroadleafCommerce Presentation layer codebase</description>
