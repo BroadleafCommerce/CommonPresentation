@@ -17,6 +17,8 @@
  */
 package org.broadleafcommerce.presentation.resolver;
 
+import java.io.InputStream;
+
 /**
  * Class used to indicate a new Template Resolver to be used to resolve file names
  * 
@@ -81,6 +83,13 @@ public interface BroadleafTemplateResolver {
      * @return true if this resolver should be in the set of email resolvers
      */
     public Boolean isEmailResolver();
-    
+
+    /**
+     * Custom logic for resolving the given resource.
+     * @param template
+     * @param resourceName
+     * @return The requested resource as an input stream.
+     */
+    public InputStream resolveResource(String template, String resourceName);
 }
 
