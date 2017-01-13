@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>broadleaf-common-presentation</artifactId>
-    <version>1.0.1-GA</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <name>BroadleafCommerce Common Presentation</name>
     <description>BroadleafCommerce Presentation layer codebase</description>
@@ -19,7 +19,7 @@
         <connection>scm:git:git@github.com:BroadleafCommerce/CommonPresentation.git</connection>
         <developerConnection>scm:git:git@github.com:BroadleafCommerce/CommonPresentation.git</developerConnection>
         <url>https://github.com/BroadleafCommerce/CommonPresentation</url>
-        <tag>broadleaf-common-presentation-1.0.1-GA</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <repositories>
