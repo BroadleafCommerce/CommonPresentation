@@ -50,7 +50,7 @@ public class SimpleCacheKeyResolver implements TemplateCacheKeyResolverService {
         StringBuilder sb = new StringBuilder();
         sb.append(cacheKey);
         String attributeDocName = getStringValue("templateName", tagAttributes, true, context);
-        sb.append("_" + (attributeDocName == null ? documentName : attributeDocName));
+        sb.append("_" + (attributeDocName == null || attributeDocName.equals("") ? documentName : attributeDocName));
         sb.append("_" + (lineNumber == null ? 0 : lineNumber));
         return sb.toString();
     }
