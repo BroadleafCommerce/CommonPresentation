@@ -95,7 +95,7 @@ public interface BroadleafTemplateContext {
     /**
      * @return Gets the current Spring {@link BindStatus} for {@code attributeValue}
      */
-    public BindStatus getBindStatus(String attributeValue);
+    public BroadleafBindStatus getBindStatus(String attributeValue);
     
     /**
      * @return The current HttpServletRequest if it exists or null otherwise
