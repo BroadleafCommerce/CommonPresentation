@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.broadleafcommerce</groupId>
         <artifactId>broadleaf-module-parent</artifactId>
-        <version>1.0.14-GA</version>
+        <version>3.0.0-GA</version>
     </parent>
 
     <artifactId>broadleaf-common-presentation</artifactId>
@@ -38,7 +38,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.uri>${project.baseUri}</project.uri>
-        <spring.version>4.1.9.RELEASE</spring.version>
+        <spring.version>5.0.8.RELEASE</spring.version>
     </properties>
 
 	<licenses>
