@@ -6,5 +6,5 @@ The Broadleaf Common Presentation module provides a set of interfaces and classe
 
 | Module Version               | Compatible Broadleaf Versions |
 | :--------------------------- | :---------------------------- | 
-| 1.0.2-GA                     | 5.1.0-GA                      |
+| 1.1.0-GA                     | 6.0.0-GA                      |
 
