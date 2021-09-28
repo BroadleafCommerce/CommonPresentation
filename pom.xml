@@ -12,14 +12,14 @@
     <description>BroadleafCommerce Presentation layer codebase</description>
     <groupId>org.broadleafcommerce</groupId>
     <artifactId>broadleaf-common-presentation</artifactId>
-    <version>1.0.5-GA</version>
+    <version>1.0.6-SNAPSHOT</version>
     <url>https://www.broadleafcommerce.com</url>
 
     <scm>
         <connection>scm:git:git@github.com:BroadleafCommerce/CommonPresentation.git</connection>
         <developerConnection>scm:git:git@github.com:BroadleafCommerce/CommonPresentation.git</developerConnection>
         <url>https://github.com/BroadleafCommerce/CommonPresentation</url>
-        <tag>broadleaf-common-presentation-1.0.5-GA</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <repositories>
