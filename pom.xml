@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.broadleafcommerce</groupId>
         <artifactId>broadleaf-module-parent</artifactId>
-        <version>3.3.1-GA</version>
+        <version>3.3.2-GA</version>
     </parent>
 
     <name>BroadleafCommerce Common Presentation</name>
@@ -18,7 +18,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.uri>${project.baseUri}</project.uri>
-        <spring.version>5.3.11</spring.version>
+        <spring.version>5.3.15</spring.version>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:BroadleafCommerce/CommonPresentation.git</connection>
