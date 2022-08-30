@@ -19,5 +19,5 @@ package org.broadleafcommerce.presentation.resolver;
 
 
 public enum BroadleafTemplateResolverType {
-    THEME_AWARE, DATABASE, CLASSPATH, CUSTOM
+    THEME_AWARE, DATABASE, CLASSPATH, CUSTOM, STRING
 }
