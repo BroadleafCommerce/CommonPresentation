@@ -22,7 +22,7 @@ import org.springframework.web.servlet.support.BindStatus;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * Utility class to be used to do various functions on and around the template
