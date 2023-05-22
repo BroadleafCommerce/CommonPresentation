@@ -18,7 +18,7 @@
     <properties>
         <project.uri>${project.baseUri}</project.uri>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>5.3.20</spring.version>
+        <spring.version>5.3.27</spring.version>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:BroadleafCommerce/CommonPresentation.git</connection>
