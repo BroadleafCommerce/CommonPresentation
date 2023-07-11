@@ -35,7 +35,7 @@ public class SimpleCacheKeyResolver implements TemplateCacheKeyResolverService {
      * If cacheKey is null, only the templateName is returned.
      * 
      * If cacheKey is "none" then null will be returned causing the template not to be cached.
-     * @param the tag name that the cache processor is running in
+     * @param tagName the tag name that the cache processor is running in
      * @param tagAttributes the attributes used in the tag or ones added by the cache processor
      * @param documentName the name of the template
      * @param lineNumber the line that the cache processor is on
