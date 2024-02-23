@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -21,9 +21,8 @@ package org.broadleafcommerce.presentation.resolver;
  * Broadleaf's version of Thymeleaf's enum TemplateMode
  * This enum is used to designate what type of file that a resource resolver should
  * be used for. Normally we'll use {@code HTML5} since most templates are HTML5
- * 
- * @author Jay Aisenbrey (cja769)
  *
+ * @author Jay Aisenbrey (cja769)
  */
 public enum BroadleafTemplateMode {
     HTML, XML, TEXT, JAVASCRIPT, CSS, RAW, HTML5, LEGACYHTML5;

@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * Holder object for passing around a {@link BroadleafTemplateModel} and a Map that represents the parameters
  * that should be used when creating the tag. See {@link AbstractBroadleafModelModifierProcessor}
- * 
+ *
  * @author Jay Aisenbrey (cja769)
  */
 public class BroadleafTemplateModelModifierDTO {
@@ -34,7 +34,7 @@ public class BroadleafTemplateModelModifierDTO {
     protected Map<String, String> formParameters = new HashMap<>();
     protected Map<String, Object> formLocalVariables = new HashMap<>();
     protected String replacementTagName;
-    
+
     public BroadleafTemplateModelModifierDTO() {
         // default constructor intentionally left empty
     }
@@ -44,7 +44,7 @@ public class BroadleafTemplateModelModifierDTO {
         this.formParameters = formParameters;
         this.replacementTagName = replacementTagName;
     }
-    
+
     public BroadleafTemplateModelModifierDTO(BroadleafTemplateModel model, Map<String, String> formParameters, Map<String, Object> formLocalVariables, String replacementTagName) {
         this.model = model;
         this.formParameters = formParameters;
@@ -75,11 +75,11 @@ public class BroadleafTemplateModelModifierDTO {
     public void setFormLocalVariables(Map<String, Object> formLocalVariables) {
         this.formLocalVariables = formLocalVariables;
     }
-    
+
     public String getReplacementTagName() {
         return replacementTagName;
     }
-    
+
     public void setReplacementTagName(String replacementTagName) {
         this.replacementTagName = replacementTagName;
     }

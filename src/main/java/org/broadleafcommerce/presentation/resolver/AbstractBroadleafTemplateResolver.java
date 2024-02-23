@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -22,9 +22,8 @@ import java.io.InputStream;
 /**
  * Abstract implementation of {@link BroadleafTemplateResolver} that has some defaults.
  * Most of the time you'll want to create a bean of an existing implementation of this class.
- * 
- * @author Jay Aisenbrey (cja769)
  *
+ * @author Jay Aisenbrey (cja769)
  */
 public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemplateResolver {
 
@@ -37,30 +36,30 @@ public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemp
     protected Integer order = 1000;
     protected BroadleafTemplateMode templateMode = BroadleafTemplateMode.HTML5;
     protected Boolean emailResolver = false;
-    
+
     @Override
     public String getPrefix() {
         return prefix;
     }
-    
+
     public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
-    
+
     @Override
     public String getSuffix() {
         return suffix;
     }
-    
+
     public void setSuffix(String suffix) {
         this.suffix = suffix;
     }
-    
+
     @Override
     public String getTemplateFolder() {
         return templateFolder;
     }
-    
+
     public void setTemplateFolder(String templateFolder) {
         this.templateFolder = templateFolder;
     }
@@ -69,43 +68,43 @@ public abstract class AbstractBroadleafTemplateResolver implements BroadleafTemp
     public Boolean isCacheable() {
         return cacheable;
     }
-    
+
     public void setCacheable(Boolean cacheable) {
         this.cacheable = cacheable;
     }
-    
+
     @Override
     public Long getCacheTTLMs() {
         return cacheTimeToLive;
     }
-    
+
     public void setCacheTTLMs(Long cacheTimeToLive) {
         this.cacheTimeToLive = cacheTimeToLive;
     }
-    
+
     @Override
     public String getCharacterEncoding() {
         return characterEncoding;
     }
-    
+
     public void setCharacterEncoding(String characterEncoding) {
         this.characterEncoding = characterEncoding;
     }
-    
+
     @Override
     public Integer getOrder() {
         return order;
     }
-    
+
     public void setOrder(Integer order) {
         this.order = order;
     }
-    
+
     @Override
     public BroadleafTemplateMode getTemplateMode() {
         return templateMode;
     }
-    
+
     public void setTemplateMode(BroadleafTemplateMode templateMode) {
         this.templateMode = templateMode;
     }

@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -21,35 +21,34 @@ package org.broadleafcommerce.presentation.dialect;
  * Defines the base of what a template processor is in Broadleaf.
  * A processor is a class that is ran when a keyword is found either as a tag name or attribute.
  * The keyword is {@link #getPrefix()} + ":" + {@link #getName()}.
- * 
- * @author Jay Aisenbrey (cja769)
  *
+ * @author Jay Aisenbrey (cja769)
  */
 public interface BroadleafProcessor {
-    
+
     /**
      * @return The name part of the keyword that this class should be triggered on.
      * The "price" part of {@code blc:price}
      */
-    public String getName();
-    
+    String getName();
+
     /**
      * @return When this processor should be ran in relation to other processors in the dialect.
-     * Runs from smallest number to largest 
+     * Runs from smallest number to largest
      */
-    public int getPrecedence();
-    
+    int getPrecedence();
+
     /**
      * @return The prefix that should be prepended to the name for the class to be triggered on.
      * The "blc" part of {@code blc:price}
      * @see {@link BroadleafDialectPrefix}
      */
-    public String getPrefix();
-    
+    String getPrefix();
+
     /**
      * {@link BroadleafDialectPrefix#BLC}
      */
-    public static final String DEFAULT_PREFIX = BroadleafDialectPrefix.BLC;
-    
-    public static final int DEFAULT_PRECEDENCE = 1000;
+    String DEFAULT_PREFIX = BroadleafDialectPrefix.BLC;
+
+    int DEFAULT_PRECEDENCE = 1000;
 }

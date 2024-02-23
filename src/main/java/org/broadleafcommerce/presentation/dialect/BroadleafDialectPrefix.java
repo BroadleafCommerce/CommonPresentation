@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -19,9 +19,8 @@ package org.broadleafcommerce.presentation.dialect;
 
 /**
  * Used to specify which dialect a {@link BroadleafProcessor} should be in
- * 
- * @author Jay Aisenbrey (cja769)
  *
+ * @author Jay Aisenbrey (cja769)
  */
 public class BroadleafDialectPrefix {
     /**
@@ -29,10 +28,10 @@ public class BroadleafDialectPrefix {
      * This means it'll be used in site, admin, or both depending on the context the bean is created
      */
     public static final String BLC = "blc";
-    
+
     /**
      * Specifies the {@link BroadleafProcessor} should use the "blc_admin" prefix, for use in the Broadleaf admin application
      */
     public static final String BLC_ADMIN = "blc_admin";
-    
+
 }
