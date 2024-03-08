@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -20,9 +20,8 @@ package org.broadleafcommerce.presentation.resolver;
 /**
  * Implementation of {@link AbstractBroadleafTemplateResolver} that is used if the templates that need to be resolved
  * are not under {@code WEB-INF} but are instead somewhere else on the classpath
- * 
- * @author Jay Aisenbrey (cja769)
  *
+ * @author Jay Aisenbrey (cja769)
  */
 public class BroadleafClasspathTemplateResolver extends AbstractBroadleafTemplateResolver {
 

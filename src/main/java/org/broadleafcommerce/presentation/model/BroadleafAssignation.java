@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -19,30 +19,28 @@ package org.broadleafcommerce.presentation.model;
 
 /**
  * An expression that represents an assignation of a value to a key
- * 
- * @author Jay Aisenbrey (cja769)
  *
+ * @author Jay Aisenbrey (cja769)
  */
 public interface BroadleafAssignation {
 
     /**
      * @return The parsed result of the left side of the assignation
      */
-    public Object parseLeft(BroadleafTemplateContext context);
+    Object parseLeft(BroadleafTemplateContext context);
 
     /**
      * @return The parsed result of the right side of the assignation
      */
-    public Object parseRight(BroadleafTemplateContext context);
+    Object parseRight(BroadleafTemplateContext context);
 
     /**
-     * 
      * @return The string representation of the left side expression of the assignation
      */
-    public String getLeftStringRepresentation(BroadleafTemplateContext context);
+    String getLeftStringRepresentation(BroadleafTemplateContext context);
 
     /**
      * @return The string representation of the right side expression of the assignation
      */
-    public String getRightStringRepresentation(BroadleafTemplateContext context);
+    String getRightStringRepresentation(BroadleafTemplateContext context);
 }

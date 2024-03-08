@@ -10,7 +10,7 @@
  * the Broadleaf End User License Agreement (EULA), Version 1.1
  * (the "Commercial License" located at http://license.broadleafcommerce.org/commercial_license-1.1.txt)
  * shall apply.
- * 
+ *
  * Alternatively, the Commercial License may be replaced with a mutually agreed upon license (the "Custom License")
  * between you and Broadleaf Commerce. You may not use this file except in compliance with the applicable license.
  * #L%
@@ -20,14 +20,14 @@ package org.broadleafcommerce.presentation.model;
 /**
  * Interface for all {@link BroadleafThymeleafElement}s that have the ability to add elements inside of it. An example is something like a
  * {@code <p>some text</p>} tag as opposed to a {@code <br />} tag that has no body.
- * 
+ *
  * @author Jay Aisenbrey (cja769)
  * @see {@link BroadleafTemplateContext} for how to create these elements
  */
 public interface BroadleafTemplateNonVoidElement extends BroadleafTemplateElement {
 
     /**
-     * Adds a child element to this element. Adding elements conserves order in which they were added 
+     * Adds a child element to this element. Adding elements conserves order in which they were added
      */
-    public void addChild(BroadleafTemplateElement child);
+    void addChild(BroadleafTemplateElement child);
 }
