@@ -10,4 +10,5 @@ The Broadleaf Common Presentation module provides a set of interfaces and classe
 |    1.1.0-GA    |           6.1.0-GA            |
 |    1.3.0-GA    |           6.2.0-GA            |
 |    2.0.0-GA    |           7.0.0-GA            |
+|    2.1.0-GA    |           7.1.0-GA            |
 
